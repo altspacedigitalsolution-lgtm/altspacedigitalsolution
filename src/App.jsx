@@ -27,32 +27,28 @@ const services = [
 
 const works = [
   {
-    title: "Travel Promo Reel",
-    category: "Video Editing / Ads",
-    desc: "A cinematic short-form travel campaign with fast hooks, motion text, and energetic pacing.",
-    visual: "SIARGAO 3D2N",
-    accent: "from-cyan-400/30 via-blue-500/20 to-white/10",
+    title: "Travel Ads Video",
+    category: "Travel / Short-form Ads",
+    desc: "A high-energy travel ad designed for fast attention, destination desire, and social media engagement.",
+    youtubeId: "9EnXHOzzF38",
   },
   {
-    title: "Restaurant Digital Menu",
-    category: "Design / Video Menu",
-    desc: "A modern digital menu board system with food highlights, pricing, and promo-ready layouts.",
-    visual: "DIGITAL MENU",
-    accent: "from-orange-400/30 via-red-500/20 to-white/10",
+    title: "BPO Corporate Video",
+    category: "Corporate / Brand Content",
+    desc: "A professional BPO-focused video built to communicate credibility, culture, and business value.",
+    youtubeId: "D5OUucKNJOs",
   },
   {
-    title: "BPO Brand Awareness Content",
-    category: "Corporate Marketing",
-    desc: "Professional content concepts for recruitment, culture, and service credibility campaigns.",
-    visual: "BPO CONTENT",
-    accent: "from-violet-500/30 via-fuchsia-500/20 to-white/10",
+    title: "Product Ads Video",
+    category: "Product / Performance Ads",
+    desc: "A product-focused short-form ad with clear visual presentation and conversion-driven pacing.",
+    youtubeId: "kP__JT0H2BA",
   },
   {
-    title: "AI Avatar Marketing Video",
-    category: "AI Creative Production",
-    desc: "Avatar-led brand introductions with natural movement, script direction, and modern presentation.",
-    visual: "AI AVATAR",
-    accent: "from-emerald-400/30 via-cyan-500/20 to-white/10",
+    title: "Real Estate Reel",
+    category: "Real Estate / Property Reel",
+    desc: "A real estate reel crafted to highlight property visuals, lifestyle appeal, and lead-generation potential.",
+    youtubeId: "5T1_Yndj0Mk",
   },
 ];
 
@@ -79,7 +75,7 @@ export default function AltspacePortfolio() {
 
       <header className="relative z-10 max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <img src="/logoaltspace.png" alt="Altspace Digital" className="h-32 w-auto object-contain" />
+          <img src="/logoaltspace.png" alt="Altspace Digital Solution" className="h-12 w-auto object-contain" />
         </div>
         <nav className="hidden md:flex gap-8 text-sm text-white/70">
           <a href="#about" className="hover:text-white">About</a>
@@ -123,10 +119,9 @@ export default function AltspacePortfolio() {
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <motion.div initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-5">
-                <div className="aspect-[4/5] rounded-[1.5rem] bg-gradient-to-br from-cyan-400/25 via-violet-500/20 to-white/10 flex items-center justify-center overflow-hidden">
-                  <div className="text-center px-8">
-                    <div className="w-28 h-28 mx-auto rounded-full bg-white/10 border border-white/20 flex items-center justify-center mb-6"><Camera className="w-12 h-12 text-white/50" /></div>
-                    <p className="text-white/50 text-sm mb-2">Founder Photo Placeholder</p>
+                <div className="aspect-[4/5] rounded-[1.5rem] bg-gradient-to-br from-cyan-400/25 via-violet-500/20 to-white/10 overflow-hidden relative">
+                  <img src="/carl-photo.png" alt="Carlwinn Pangilinan" className="w-full h-full object-cover" />
+                  <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black via-black/70 to-transparent">
                     <h3 className="text-2xl font-black">Carlwinn Pangilinan</h3>
                     <p className="text-cyan-300 mt-2">Creative Director • Video Editor • Digital Marketer</p>
                   </div>
@@ -165,9 +160,14 @@ export default function AltspacePortfolio() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {works.map((work, index) => (
               <motion.div key={index} whileHover={{ y: -6 }} className="rounded-[2rem] border border-white/10 bg-white/[0.04] overflow-hidden">
-                <div className={`aspect-[9/16] max-h-[560px] bg-gradient-to-br ${work.accent} flex items-center justify-center relative overflow-hidden`}>
-                  <div className="absolute inset-6 rounded-[1.5rem] border border-white/10 bg-black/20 backdrop-blur-sm" />
-                  <div className="relative text-center px-4"><Clapperboard className="w-12 h-12 text-white/50 mx-auto mb-4" /><p className="text-2xl font-black tracking-tight text-white/80">{work.visual}</p><p className="text-xs text-white/40 mt-2">9:16 video placeholder</p></div>
+                <div className="aspect-[9/16] bg-black relative overflow-hidden">
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src={`https://www.youtube.com/embed/${work.youtubeId}`}
+                    title={work.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
                 </div>
                 <div className="p-7"><p className="text-cyan-400 text-sm font-semibold mb-2">{work.category}</p><h3 className="text-2xl font-bold mb-3">{work.title}</h3><p className="text-white/60">{work.desc}</p></div>
               </motion.div>
