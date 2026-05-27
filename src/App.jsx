@@ -19,12 +19,48 @@ const services = [
 ];
 
 const works = [
-  { title: "Travel Ads Video", category: "Travel / Ads", youtubeId: "9EnXHOzzF38" },
-  { title: "BPO Corporate Video", category: "Corporate", youtubeId: "D5OUucKNJOs" },
-  { title: "Product Ads Video", category: "Product Ads", youtubeId: "kP__JT0H2BA" },
-  { title: "Real Estate Reel", category: "Real Estate", youtubeId: "5T1_Yndj0Mk" },
+  {
+    title: "Travel Ads Video",
+    category: "Travel / Ads",
+    youtubeId: "9EnXHOzzF38",
+  },
+  {
+    title: "BPO Corporate Video",
+    category: "Corporate",
+    youtubeId: "D5OUucKNJOs",
+  },
+  {
+    title: "Product Ads Video",
+    category: "Product Ads",
+    youtubeId: "kP__JT0H2BA",
+  },
+  {
+    title: "Real Estate Reel",
+    category: "Real Estate",
+    youtubeId: "5T1_Yndj0Mk",
+  },
+  {
+    title: "Luxury Ads",
+    category: "Luxury / Commercial",
+    youtubeId: "Zd-wwdh22Mc",
+  },
+  {
+    title: "Product Commercial",
+    category: "Product / Ads",
+    youtubeId: "RlLpRdjCpks",
+  },
+  {
+    title: "Food Ads",
+    category: "Food / Commercial",
+    youtubeId: "eW920rlqFY4",
+  },
+  {
+    title: "Food Vlog",
+    category: "Long-form Content",
+    youtubeId: "OxCItqgFZwg",
+  },
 ];
-
+ 
 const funnelDesigns = [
   { name: "Skincare Cart", src: "/funnels/skincare_cart/index.html" },
   { name: "Government Assistance Form", src: "/funnels/gov_assistanceform/index.html" },
@@ -173,18 +209,6 @@ export default function App() {
                   <h3 className="text-xl font-bold">{work.title}</h3>
                 </div>
               </motion.div>
-            ))}
-
-            {["AI UGC", "Food Ads", "Luxury Reel", "Motion Graphics"].map((item, index) => (
-              <div key={index} className="w-[280px] rounded-[2rem] border border-dashed border-white/10 bg-white/[0.03] overflow-hidden shrink-0">
-                <div className="aspect-[9/16] flex items-center justify-center">
-                  <div className="text-center px-6">
-                    <Clapperboard className="w-12 h-12 text-cyan-300 mx-auto mb-4" />
-                    <h3 className="text-2xl font-black">{item}</h3>
-                    <p className="text-white/40 mt-3 text-sm">Future portfolio video</p>
-                  </div>
-                </div>
-              </div>
             ))}
           </div>
         </div>
