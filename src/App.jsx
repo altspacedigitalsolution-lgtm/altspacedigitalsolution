@@ -73,7 +73,7 @@ export default function App() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#6d28d950,transparent_35%),radial-gradient(circle_at_top_left,#0ea5e950,transparent_35%)] pointer-events-none" />
 
       <header className="relative z-10 max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-        <img src="/logoaltspace.png" alt="Altspace Logo" className="h-12 object-contain" />
+        <img src="/logoaltspace.png" alt="Altspace Logo" className="h-24 object-contain" />
 
         <nav className="hidden md:flex gap-8 text-sm text-white/70">
           <a href="#about">About</a>
@@ -97,7 +97,7 @@ export default function App() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-black leading-tight">
-            Creative digital solutions that make brands look premium.
+            Creative Digital Solutions that make brands look premium.
           </h1>
 
           <p className="mt-6 text-lg text-white/70 max-w-xl">
@@ -120,7 +120,6 @@ export default function App() {
             <div className="rounded-3xl bg-black/50 border border-white/10 p-6 w-full">
               <p className="text-sm text-white/60 mb-2">Featured Capability</p>
               <h3 className="text-2xl font-bold">Video-first marketing built for attention.</h3>
-              <p className="text-white/60 mt-3">Replace this with your cinematic hero reel later.</p>
             </div>
           </div>
         </motion.div>
@@ -133,7 +132,7 @@ export default function App() {
               <img src="/carl-photo.png" alt="Carlwinn Pangilinan" className="w-full h-full object-cover" />
               <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black via-black/70 to-transparent">
                 <h3 className="text-2xl font-black">Carlwinn Pangilinan</h3>
-                <p className="text-cyan-300 mt-2">Creative Director • Video Editor • Digital Marketer</p>
+                <p className="text-cyan-300 mt-2">Creative Content Specialist • Video Editor • Digital Marketer</p>
               </div>
             </div>
           </motion.div>
@@ -141,7 +140,7 @@ export default function App() {
           <div>
             <p className="text-cyan-400 font-semibold mb-3">About the founder</p>
             <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
-              Hi, I’m Carl — the creative mind behind Altspace Digital Solution.
+              Hi, I’m Carl Winn — the creative mind behind Altspace Digital Solution.
             </h2>
 
             <p className="text-white/70 text-lg leading-relaxed mb-5">
